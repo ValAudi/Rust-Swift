@@ -1,8 +1,0 @@
-./.DS_Store
-./PointerNotes.txt
-./net_link/.DS_Store
-./net_link/.vscode/*
-./net_link/Cargo.lock
-./net_link/target/*
-./ListInterfaces/.DS_Store
-./.gitignore
