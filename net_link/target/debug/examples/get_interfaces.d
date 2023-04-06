@@ -1,1 +1,0 @@
-/Users/pamelaaudi/Documents/CodeTemplates/Rust-Swift/net_link/target/debug/examples/get_interfaces: /Users/pamelaaudi/Documents/CodeTemplates/Rust-Swift/net_link/examples/get_interfaces.rs /Users/pamelaaudi/Documents/CodeTemplates/Rust-Swift/net_link/src/lib.rs
