@@ -5,3 +5,4 @@
 ./net_link/Cargo.lock
 ./net_link/target/*
 ./ListInterfaces/.DS_Store
+./.gitignore
