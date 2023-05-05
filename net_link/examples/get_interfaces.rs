@@ -1,5 +1,3 @@
-
-// use net_link::*;
 use std::os::raw::*;
 
 fn main() {
