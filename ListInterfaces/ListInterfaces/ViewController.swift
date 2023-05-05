@@ -52,9 +52,6 @@ struct interface_data {
 
 class ViewController: UIViewController {
     
-    
-    @IBOutlet weak var CompContainer: UIView!
-    
     func getInterfacesData () -> [interface_data] {
         let count = get_interface_data_count()
         let pointer: UnsafePointer<InterfaceData> = UnsafePointer(get_interface_data()!)
@@ -67,16 +64,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let data_array = getInterfacesData()
-        
-        let name = UILabel()
-        name.text = data_array[0].name
-        name.textColor = UIColor.black
-        CompContainer.addSubview(name)
-        name.translatesAutoresizingMaskIntoConstraints = false
-                NSLayoutConstraint.activate([
-                    name.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                    name.centerYAnchor.constraint(equalTo: view.centerYAnchor)
-                ])
         
         for interfaceData in data_array {
             print("Name: \(interfaceData.name)")
