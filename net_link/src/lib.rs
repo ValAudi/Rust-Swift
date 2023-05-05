@@ -91,23 +91,10 @@ impl InterfaceData {
     }
 }
 
-// impl Drop for InterfaceData {
-//     fn drop(&mut self) {
-//         unsafe {
-//             CString::from_raw(self.name as *mut _);
-//             CString::from_raw(self.description as *mut _);
-//             CString::from_raw(self.ips as *mut _);
-//         }
-//     }
-// }
-
 #[no_mangle]
 pub extern "C" fn get_interface_data() -> *mut InterfaceData {
     let interfaces = Interfaces::new();
     let interfaces_data = interfaces.iter().map(|interface| InterfaceData::new(interface)).collect::<Vec<InterfaceData>>();
-    // let boxed_idata = Box::new(interfaces_data);
-    // let boxed_raw = Box::into_raw(boxed_idata) as *mut InterfaceData;
-    // boxed_raw
     let interface_data_ptr = interfaces_data.as_ptr() as *mut InterfaceData;
     std::mem::forget(interfaces_data);
     interface_data_ptr
